@@ -1,0 +1,33 @@
+{
+  "name": "meerstadwebsites.nl",
+  "version": "1.0.0",
+  "description": "Meerstad Websites",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wouter-muller/meerstadwebsites.nl.git"
+  },
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-kit": "^0.3.0",
+    "gulp-livereload": "^4.0.1",
+    "gulp-order": "^1.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-svgo": "^1.5.4",
+    "gulp-uglify-es": "^1.0.4",
+    "node-sass-magic-importer": "^5.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

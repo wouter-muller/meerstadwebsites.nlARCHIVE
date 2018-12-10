@@ -1,0 +1,35 @@
+// Some basic resetting... The approach we use is that elements do not have
+// any margin or padding by default, until explicitly set otherwise. This
+// promotes a more logical and predictable code base.
+*,
+*::before,
+*::after
+  box-sizing: border-box // This forces padding to not affect height or width of an element
+  margin: 0
+  padding: 0
+
+\:root
+  -webkit-font-smoothing: antialiased;
+
+html,
+body
+  height: 100%
+
+a
+  outline: none
+
+ul
+  li
+    list-style: none
+
+// Remove up/down arrows on input[type='number']'s
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+button
+  border: 0
+
+img
+  max-width: 100%

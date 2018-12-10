@@ -1,0 +1,59 @@
+@charset 'UTF-8'
+
+// ----------------------------------------------------------------------------
+// Every global variable, function and mixin should be put in here. The rule
+// of thumb for this folder is that it should not output a single line of CSS
+// when compiled on its own.
+// ----------------------------------------------------------------------------
+
+@import 'abstracts/functions/*.*'
+@import 'abstracts/variables/*.*'
+@import 'abstracts/mixins/*.*'
+
+body
+  background: black
+  display: flex
+  align-items: center
+  justify-content: center
+
+// ----------------------------------------------------------------------------
+// The base folder contains reset styles as well as global rules. For example
+// top-level HTML tags like p, h1, h2, ul etc.
+// ----------------------------------------------------------------------------
+
+@import 'base/*.*'
+
+// ----------------------------------------------------------------------------
+// The layout folder contains classes that influence layout, for example a
+// grid or a wrapper. They are similar to utilities, but where utilities do
+// 'something' with a component, layout classes control the layout of the
+// page on a higher level.
+// ----------------------------------------------------------------------------
+
+@import 'layout/*.*'
+
+// ----------------------------------------------------------------------------
+// The components folder is where our reusable components (e.g. buttons, icons,
+// tooltips etc) are located. It should be styled in such a way that it is
+// reusable at different positions, on different pages, and in various
+// situations. All components should be namespaced with `c-`, like
+// `.c-button`
+// ----------------------------------------------------------------------------
+
+@import 'components/**/*.*'
+
+// ----------------------------------------------------------------------------
+// Certain CSS properties and patterns are used frequently. For example:
+// margins, paddings, floats, vertical alignment, text truncation, hiding
+// elements for mobile devices etc. Relying on utilities can help to reduce
+// repetition and provide consistent implementations. Use sparingly! Utilities
+// should be namespaced with `u-`, like `.u-text--center`.
+// ----------------------------------------------------------------------------
+
+@import 'utilities/*.*'
+
+// ----------------------------------------------------------------------------
+// The specifics folder is where non-reusable elements reside.
+// ----------------------------------------------------------------------------
+
+@import 'specifics/**/*.*'
