@@ -1,11 +1,12 @@
 {
-  "name": "meerstadwebsites.nl",
+  "name": "boilerplate-project",
   "version": "1.0.0",
-  "description": "Meerstad Websites",
+  "description": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wouter-muller/meerstadwebsites.nl.git"
+    "url": "https://github.com/wouter-muller/xxx.git"
   },
+  "author": "",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -21,13 +22,15 @@
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
+    "gulp-sass-lint": "^1.4.0",
     "gulp-svgo": "^1.5.4",
     "gulp-uglify-es": "^1.0.4",
+    "lodash": ">=4.17.5",
+    "minimatch": ">=3.0.2",
     "node-sass-magic-importer": "^5.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
   "license": "ISC"
 }

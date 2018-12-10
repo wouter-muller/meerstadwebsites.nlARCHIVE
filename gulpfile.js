@@ -13,6 +13,7 @@ var autoprefixer = require('gulp-autoprefixer'),
   replace = require('gulp-replace'),
   rename = require('gulp-rename'),
   sass = require('gulp-sass'),
+  sassLint = require('gulp-sass-lint'),
   imagemin = require('gulp-imagemin'),
   uglify = require('gulp-uglify-es').default;
 
@@ -39,6 +40,9 @@ gulp.task('html', function() {
 gulp.task('css', function() {
   return gulp
     .src(config.sourceDir + '/styles/styles.sass')
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
     .pipe(plumber())
     .pipe(sass({ outputStyle: 'compressed', importer: magicImporter() }))
     .pipe(
@@ -87,6 +91,18 @@ gulp.task('js', function() {
 
 gulp.task('clean', function() {
   return del(config.outputDir + '/**/*');
+});
+
+// ----------------------------------------------------------------------------
+// Clean
+// ----------------------------------------------------------------------------
+
+gulp.task('lint', function() {
+  return gulp
+    .src(config.sourceDir + '/styles/**/*.s+(a|c)ss')
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError());
 });
 
 // ----------------------------------------------------------------------------
