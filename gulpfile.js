@@ -14,6 +14,7 @@ var autoprefixer = require('gulp-autoprefixer'),
   rename = require('gulp-rename'),
   sass = require('gulp-sass'),
   sassLint = require('gulp-sass-lint'),
+  strip = require('gulp-strip-comments'),
   imagemin = require('gulp-imagemin'),
   uglify = require('gulp-uglify-es').default;
 
@@ -30,6 +31,7 @@ gulp.task('html', function() {
   return gulp
     .src('src/views/*.html')
     .pipe(kit())
+    .pipe(strip())
     .pipe(gulp.dest(''));
 });
 

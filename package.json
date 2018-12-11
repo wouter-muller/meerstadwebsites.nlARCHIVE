@@ -23,6 +23,7 @@
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sass-lint": "^1.4.0",
+    "gulp-strip-comments": "^2.5.2",
     "gulp-svgo": "^1.5.4",
     "gulp-uglify-es": "^1.0.4",
     "lodash": ">=4.17.5",
